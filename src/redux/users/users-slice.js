@@ -8,7 +8,7 @@ const initialState = {
     error: null,
 }
 
-const contactsSlice = createSlice({
+const usersSlice = createSlice({
     name: "users",
     initialState,
     extraReducers: (builder) => {
@@ -53,4 +53,4 @@ const contactsSlice = createSlice({
     }
 });
 
-export default contactsSlice.reducer;
+export default usersSlice.reducer;

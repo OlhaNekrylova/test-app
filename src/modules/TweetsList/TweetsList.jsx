@@ -10,11 +10,12 @@ import styled from './TweetsList.module.css';
 const TweetsList = () => {
 
     const dispatch = useDispatch();
-    const users = useSelector(getAllUsers);
-
+    
     useEffect(()=> {
         dispatch(fetchAllUsers());
     }, [dispatch])
+
+    const users = useSelector(getAllUsers);
 
     return (
         <>
@@ -22,7 +23,7 @@ const TweetsList = () => {
         <ul className={styled.list}>
             {users?.data.map((items) => {
                 return( <TweetItem
-                    key={items.id}
+                    key={items._id}
                     data={items}
                     // toggleModal={handleOpenModal}
                     // deleteNotices={handleOpenModal}
@@ -39,6 +40,10 @@ const TweetsList = () => {
         </>
     )
 
+}
+
+TweetsList.defaultProps = {
+    items: []
 }
 
 export default TweetsList;

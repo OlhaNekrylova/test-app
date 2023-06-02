@@ -3,12 +3,12 @@ import React from 'react';
 
 import styled from './TweetItem.module.css';
 
-const TweetItem = ({ data, }) => {
-    const { id, avatar, tweets, followers } = data;
+const TweetItem = ({ _id, avatar, tweets, followers }) => {
+    // const { id, avatar, tweets, followers } = data;
 
     return (
-        <li>
-            <div>
+        <li className={styled.item}>
+            <div className={styled.itemImage}> 
                 <div className={styled.imageWrapper}>
                     <img className={styled.image}
                         // src={image}
@@ -16,18 +16,18 @@ const TweetItem = ({ data, }) => {
                         width='280'
                     />
                 </div>
-                <div className={styled.info}>
-                    <img className={styled.image}
+                <div className={styled.avatarWrapper}>
+                    <img className={styled.avatar}
                         src={avatar}
                         alt='Your avatar'
                         width='280'
                     />
                 </div>
-                <div className={styled.info}>
-                    <span className={styled.infoText}>
+                <div className={styled.infoWrapper}>
+                    <span className={styled.tweetsText}>
                         {tweets} TWEETS
                     </span>
-                    <span className={styled.infoText}>
+                    <span className={styled.followersText}>
                         {followers} FOLLOWERS
                     </span>
                 </div>

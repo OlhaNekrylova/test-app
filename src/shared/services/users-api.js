@@ -5,7 +5,7 @@ const usersInstance = axios.create({
 })
 
 export const fetchUsers = async()=> {
-    const {data} = await usersInstance.get("/tweets");
+    const {data} = await usersInstance.get("/");
     return data;
 }
 
