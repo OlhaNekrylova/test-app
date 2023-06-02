@@ -23,7 +23,7 @@ const TweetsList = () => {
         <ul className={styled.list}>
             {users?.data.map((items) => {
                 return( <TweetItem
-                    key={items._id}
+                    key={items.id}
                     data={items}
                     // toggleModal={handleOpenModal}
                     // deleteNotices={handleOpenModal}
@@ -42,8 +42,8 @@ const TweetsList = () => {
 
 }
 
-TweetsList.defaultProps = {
-    items: []
-}
+// TweetsList.defaultProps = {
+//     items: []
+// }
 
 export default TweetsList;

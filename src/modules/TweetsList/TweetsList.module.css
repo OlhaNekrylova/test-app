@@ -8,6 +8,7 @@
     justify-content: center;
     margin-top: 24px;
     column-gap: 24px;
+    
 
     /* @include tablet {
         margin-top: 40px;

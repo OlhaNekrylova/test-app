@@ -1,9 +1,8 @@
 import React from 'react';
 
-
 import styled from './TweetItem.module.css';
 
-const TweetItem = ({ _id, avatar, tweets, followers }) => {
+const TweetItem = ({ id, avatar, tweets, followers }) => {
     // const { id, avatar, tweets, followers } = data;
 
     return (
