@@ -1,25 +1,25 @@
 import React from 'react';
 
-import styled from './TweetItem.module.css';
+import styled from './TweetItem.module.scss';
 
 const TweetItem = ({ id, avatar, tweets, followers }) => {
     // const { id, avatar, tweets, followers } = data;
 
     return (
         <li className={styled.item}>
-            <div className={styled.itemImage}> 
+            {/* <div className={styled.itemImage}> 
                 <div className={styled.imageWrapper}>
                     <img className={styled.image}
                         // src={image}
                         alt='Your pet'
-                        width='280'
+                        width='50'
                     />
-                </div>
+                </div> */}
                 <div className={styled.avatarWrapper}>
                     <img className={styled.avatar}
                         src={avatar}
                         alt='Your avatar'
-                        width='280'
+                        width='50'
                     />
                 </div>
                 <div className={styled.infoWrapper}>
@@ -41,7 +41,7 @@ const TweetItem = ({ id, avatar, tweets, followers }) => {
                 </button>
 
 
-            </div>
+            {/* </div> */}
         </li>
     )
 

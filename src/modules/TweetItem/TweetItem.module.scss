@@ -1,12 +1,25 @@
+@import "./src/styles/mixins/media";
+
 .item {
     width: 380px;
     height: 460px;
     background: linear-gradient(114.99deg, #471CA9 -0.99%, #5736A3 54.28%, #4B2A99 78.99%);
     box-shadow: -2.5777px 6.87386px 20.6216px rgba(0, 0, 0, 0.23);
     border-radius: 20px;
+
+    &:not(:last-child) {
+        margin-bottom: 24px;
+    }
+
+    @include tabletAndDesktop {
+        margin-bottom: 0px;
+    }
+
 }
 
-/* .itemImage {
+
+
+.itemImage {
 
 }
 
@@ -19,7 +32,8 @@
 }
 
 .avatarWrapper {
-
+    width: 80px;
+    height: 80px;
 }
 
 .avatar {
@@ -27,7 +41,7 @@
 }
 
 .infoWrapper {
-
+    width: 300px;
 }
 
 .tweetsText {
@@ -36,4 +50,4 @@
 
 .followersText {
 
-} */
+} 

@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 import links from "../links";
-import styles from "./Navbar.module.css";
+import styles from "./Navbar.module.scss";
 
 const Navbar = ()=> {
     const elements = links.map(({id, text, link}) => 

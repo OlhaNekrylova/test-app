@@ -3,7 +3,7 @@ import {createSlice} from "@reduxjs/toolkit";
 import { fetchAllUsers } from "./users-operations";
 
 const initialState = {
-    items: [],
+    users: [],
     loading: false,
     error: null,
 }
@@ -19,7 +19,7 @@ const usersSlice = createSlice({
         .addCase(fetchAllUsers.fulfilled, (store, { payload }) => {
             store.loading = false;
             store.error = null;
-            store.items = payload;
+            store.users = payload;
         })
         .addCase(fetchAllUsers.rejected, (store, { payload }) => {
             store.loading = false;

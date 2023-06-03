@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import styled from './Section.module.css';
+import styled from './Section.module.scss';
 import cn from 'classnames';
 
 const Section = ({ children, className }) => {
