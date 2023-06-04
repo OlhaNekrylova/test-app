@@ -1,2 +1,37 @@
 @import "./src/styles/mixins/media";
 
+.logoBox {
+    position: relative;
+    // left: 20px;
+    // top: 300px;
+    width: 380px;
+    height: 250px;
+    margin-top: 24px;
+    margin-left: auto;
+    margin-right: auto;
+    background: linear-gradient(114.99deg, #471CA9 -0.99%, #5736A3 54.28%, #4B2A99 78.99%);
+
+}
+
+.logoWrapper {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    width: 150px;
+    height: 88px;
+    border: 3px;
+}
+
+.textWrapper {
+    padding-top: 100px;
+}
+
+.text {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: #EBD8FF;
+}

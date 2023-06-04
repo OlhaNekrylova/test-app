@@ -1,5 +1,10 @@
 import React from 'react';
-
+import avatarTest from '../../assets/images/Hansel.png';
+import logo from '../../assets/images/Logo.png';
+import picture from '../../assets/images/Picture2.png';
+import rectangle from '../../assets/images/Rectangle.png';
+import circle from '../../assets/images/Circle.png';
+import ellipse from '../../assets/images/Ellipse.png';
 import styled from './TweetItem.module.scss';
 
 const TweetItem = ({ id, avatar, tweets, followers }) => {
@@ -7,41 +12,81 @@ const TweetItem = ({ id, avatar, tweets, followers }) => {
 
     return (
         <li className={styled.item}>
-            {/* <div className={styled.itemImage}> 
-                <div className={styled.imageWrapper}>
-                    <img className={styled.image}
-                        // src={image}
-                        alt='Your pet'
-                        width='50'
-                    />
-                </div> */}
-                <div className={styled.avatarWrapper}>
-                    <img className={styled.avatar}
-                        src={avatar}
-                        alt='Your avatar'
-                        width='50'
-                    />
+            <div className={styled.logoWrapper}>
+                <img className={styled.logo}
+                    src={logo}
+                    alt='Logo'
+                    width='76'
+                    height='22'    
+                />
+            </div>
+            <div className={styled.pictureWrapper}>
+                <img className={styled.picture}
+                    src={picture}
+                    alt='Pic'
+                    width='308'
+                    height='168'  
+                />
+            </div> 
+            <div className={styled.rectangleWrapper}> 
+                <img className={styled.rectangle}
+                    src={rectangle}
+                    alt='rectangle'
+                    width='380'
+                    height='8'   
+                />
+            </div>
+            <div className={styled.avatarBox}>
+                <div className={styled.circleWrapper}>
+                    <img className={styled.circle}
+                        src={circle}
+                            alt='circle'
+                            width='80'
+                            height='80'   
+                        />
                 </div>
-                <div className={styled.infoWrapper}>
-                    <span className={styled.tweetsText}>
-                        {tweets} TWEETS
-                    </span>
-                    <span className={styled.followersText}>
-                        {followers} FOLLOWERS
-                    </span>
+                <div className={styled.ellipseWrapper}>
+                    <img className={styled.ellipse}
+                            src={ellipse}
+                            alt='ellipce'
+                            width='90'
+                            height='90'   
+                        />
                 </div>
-                    <button
-                    className={styled.buttonOnClickModal}
-                    type='button'
-                    // onClick={() => toggleModal(_id, 'LeanMove')}
-                    >
-                        <span className={styled.buttonText}>
-                            FOLLOW
+                    <div className={styled.avatarWrapper}>
+                        <img className={styled.avatar}
+                            src={avatarTest}
+                            // src={avatar}
+                            alt='avatar'
+                            width='62'
+                            height='62'   
+                        />
+                    </div>
+                
+                    
+            </div>
+            <div className={styled.infoWrapper}>
+                    <div className={styled.tweets}>
+                        <span className={styled.tweetsText}>
+                            {tweets} TWEETS
                         </span>
-                </button>
-
-
-            {/* </div> */}
+                    </div>
+                    <div className={styled.followers}>
+                        <span className={styled.followersText}>
+                            {followers} FOLLOWERS
+                        </span>
+                    </div>
+                    
+            </div>
+            <button
+                className={styled.btnFollow}
+                type='button'
+                // onClick={() => toggleModal(_id, 'LeanMove')}
+            >
+                <span className={styled.btnText}>
+                    FOLLOW
+                </span>
+            </button>
         </li>
     )
 

@@ -2,20 +2,20 @@
 // import {  Outlet } from 'react-router-dom';
 // import TweetItem from 'modules/TweetItem/TweetItem';
 import TweetsList from '../../modules/TweetsList/TweetsList';
-// import Section from '../../modules/Section/Section';
-// import styled from './TweetsPage.module.css';
+import Section from '../../modules/Section/Section';
+import styled from './TweetsPage.module.scss';
 
 const TweetsPage = ()=> {
     return (
         <>
 
         
-        {/* <Section className={styled.searchWrapper}> */}
+        <Section className={styled.searchWrapper}>
         {/* <h1>TweetsPage
         </h1> */}
         {/* <TweetItem /> */}
         <TweetsList />
-        {/* </Section> */}
+        </Section>
     
         </>
     )

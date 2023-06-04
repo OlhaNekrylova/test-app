@@ -1,6 +1,10 @@
 @import "./src/styles/mixins/media";
 
 .item {
+    position: relative;
+    // display: flex;
+    // flex-wrap: wrap;
+    // justify-content: center;
     width: 380px;
     height: 460px;
     background: linear-gradient(114.99deg, #471CA9 -0.99%, #5736A3 54.28%, #4B2A99 78.99%);
@@ -17,23 +21,81 @@
 
 }
 
+.logoWrapper {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    z-index: 1;
+    width: 76px;
+    height: 22px;
+}
 
+.pictureWrapper {
+    position: absolute;
+    left: 36px;
+    top: 28px;
+    width: 308px;
+    height: 168px;
+    
+}
 
-.itemImage {
+.picture {
+    position: absolute;
+    width: 308px;
+    height: 168px;
+}
+
+.rectangleWrapper {
+    position: absolute;
+width: 380px;
+height: 8px;
+left: 0px;
+top: 214px;
+}
+
+.avatarBox {
+    position: absolute;
+    width: 84px;
+    height: 84px;
+    left: 150px;
+    top: 178px;
+
+    // border-radius: 85.9232px;
 
 }
 
-.imageWrapper {
-
+.circleWrapper {
+    position: absolute;
+width: 80px;
+height: 80px;
+left: 0px;
+top: 0px;
+// background: #fff;
 }
 
-.image {
-
+.ellipseWrapper {
+    position: absolute;
+    z-index: 3;
+    width: 90px;
+    height: 90px;
+    left: -5px;
+    top: 0px;
+    
+    // background: #EBD8FF;
+    // box-shadow: 0px 4.39163px 4.39163px rgba(0, 0, 0, 0.06), inset 0px -2.19582px 4.39163px #AE7BE3, inset 0px 4.39163px 3.29372px #FBF8FF;
+    // border-radius: 13.1749px;
 }
 
 .avatarWrapper {
-    width: 80px;
-    height: 80px;
+    position: absolute;
+    z-index: 2;
+    width: 62px;
+    height: 62px;
+    left: 9.48px;
+top: 9.42px;
+
+// left: 9.48px;
+// top: 9.42px;
 }
 
 .avatar {
@@ -41,13 +103,67 @@
 }
 
 .infoWrapper {
-    width: 300px;
+    margin-top: 284px;
+    text-align: center;
 }
 
-.tweetsText {
+.tweets {
+    padding-bottom: 16px;
+}
 
+// .followers {
+//     display: flex;
+// }
+
+.tweetsText {
+    display: block;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: #EBD8FF;
 }
 
 .followersText {
-
+    display: block;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: #EBD8FF;
 } 
+
+.btnFollow {
+    display: flex;
+    // flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 14px 28px;
+    gap: 6px;
+    width: 196px;
+    height: 50px;
+    margin-top: 26px;
+    margin-left: auto;
+    margin-right: auto;
+    // margin-bottom: 36px;
+    background: #EBD8FF;
+    box-shadow: 0px 3.43693px 3.43693px rgba(0, 0, 0, 0.25);
+    border-radius: 10.3108px;
+    border: none;
+}
+
+.btnText {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+        
+    text-transform: uppercase;
+    color: #373737;
+    
+}
