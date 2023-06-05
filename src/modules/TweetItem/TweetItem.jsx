@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+
 import avatarTest from '../../assets/images/Hansel.png';
 import logo from '../../assets/images/Logo.png';
 import picture from '../../assets/images/Picture2.png';
@@ -8,9 +9,21 @@ import ellipse from '../../assets/images/Ellipse.png';
 import styled from './TweetItem.module.scss';
 
 const TweetItem = ({ id, avatar, tweets, followers, following }) => {
-    // const { id, avatar, tweets, followers } = data;
+    // const [following, setFollowing] = useState(false);
+
     const handleFollowers =  () => {
-        return followers + 1;
+        if (!following) {
+            // resetCurrent();
+            
+            return followers + 1;
+        }
+
+        if (!following) {
+            // resetCurrent();
+            
+            return followers - 1;
+        }
+        
     };
 
 
@@ -85,7 +98,7 @@ const TweetItem = ({ id, avatar, tweets, followers, following }) => {
             <button
                 className={styled.btnFollow}
                 type='button'
-                onClick={() => handleFollowers(id)}
+                onClick={() => handleFollowers(id, followers, following)}
             >
                 <span className={styled.btnText}>
                     FOLLOW
