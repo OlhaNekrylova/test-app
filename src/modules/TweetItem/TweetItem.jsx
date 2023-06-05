@@ -10,6 +10,7 @@ import styled from './TweetItem.module.scss';
 
 const TweetItem = ({ id, avatar, tweets, followers, following }) => {
     // const [following, setFollowing] = useState(false);
+    const followersNormalize = followers.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
 
     const handleFollowers =  () => {
         if (!following) {
@@ -18,7 +19,7 @@ const TweetItem = ({ id, avatar, tweets, followers, following }) => {
             return followers + 1;
         }
 
-        if (!following) {
+        if (following) {
             // resetCurrent();
             
             return followers - 1;
@@ -90,7 +91,7 @@ const TweetItem = ({ id, avatar, tweets, followers, following }) => {
                     </div>
                     <div className={styled.followers}>
                         <span className={styled.followersText}>
-                            {followers} FOLLOWERS
+                            {followersNormalize} FOLLOWERS
                         </span>
                     </div>
                     

@@ -1,5 +1,5 @@
 import React, { useState, useEffect }  from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation, Link } from 'react-router-dom';
 import { useSelector, useDispatch } from "react-redux";
 
 import { fetchAllUsers } from "../../redux/users/users-operations";
@@ -18,12 +18,14 @@ const TweetsPage = ()=> {
 
     const dispatch = useDispatch();
     const navigate = useNavigate();
+    const location = useLocation();
+    const from = location.state?.from || '/tweets'; 
 
     useEffect(() => {
         dispatch(fetchAllUsers({ page: page }));
     }, [dispatch, page]);
 
-    const onClick = () => {
+    const loadMore = () => {
         if (page < totalPages) {
             setPage(page + 1);
         }
@@ -33,7 +35,21 @@ const TweetsPage = ()=> {
         <>
         <Section className={styled.tweetsListWrapper}>
             <TweetsList />
-            { page < totalPages && <LoadMoreBtn onClick={ onClick }/> }
+            
+            <LoadMoreBtn onClick={() => {
+                loadMore();
+            }}/> 
+            <Link
+                state={{ from }}
+            to={`/`}
+            className={styled.link}
+        >
+            <button type="button" 
+                // onClick={goBack} 
+                className={styled.btnGoBack}>
+                GO Back
+            </button>
+        </Link> 
         </Section>
                 
         {/* {LoadMoreBtn && <LoadMoreBtn onClick={loadMore}>Load more</LoadMoreBtn>}  */}
