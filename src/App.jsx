@@ -9,7 +9,7 @@ import store from "./redux/store";
 function App() {
     return (
         <Provider store={store}>
-            <BrowserRouter >
+            <BrowserRouter basename="/test-app">
                     <Navbar />
                     <UserRoutes />
                 </BrowserRouter>
