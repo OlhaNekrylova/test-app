@@ -6,7 +6,8 @@ const initialState = {
     users: [],
     loading: false,
     error: null,
-    
+    totlaUsers: 0,
+    filter: 'show all',
 }
 
 const usersSlice = createSlice({
@@ -21,6 +22,8 @@ const usersSlice = createSlice({
             store.loading = false;
             store.error = null;
             store.users = payload;
+            store.totlaUsers = payload.total;
+            
         })
         .addCase(fetchAllUsers.rejected, (store, { payload }) => {
             store.loading = false;
