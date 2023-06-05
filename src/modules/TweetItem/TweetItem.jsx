@@ -7,8 +7,12 @@ import circle from '../../assets/images/Circle.png';
 import ellipse from '../../assets/images/Ellipse.png';
 import styled from './TweetItem.module.scss';
 
-const TweetItem = ({ id, avatar, tweets, followers }) => {
+const TweetItem = ({ id, avatar, tweets, followers, following }) => {
     // const { id, avatar, tweets, followers } = data;
+    const handleFollowers =  () => {
+        return followers + 1;
+    };
+
 
     return (
         <li className={styled.item}>
@@ -81,7 +85,7 @@ const TweetItem = ({ id, avatar, tweets, followers }) => {
             <button
                 className={styled.btnFollow}
                 type='button'
-                // onClick={() => toggleModal(_id, 'LeanMove')}
+                onClick={() => handleFollowers(id)}
             >
                 <span className={styled.btnText}>
                     FOLLOW

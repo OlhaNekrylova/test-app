@@ -1,21 +1,13 @@
-import { useSelector, useDispatch } from "react-redux";
-import React, { useEffect } from 'react';
+import { useSelector } from "react-redux";
 
-import { fetchAllUsers } from "../../redux/users/users-operations";
-import { getAllUsers } from "../../redux/selectors";
+import { selectAllUsers } from "../../redux/selectors";
 
 import TweetItem from '../TweetItem/TweetItem';
+
 import styled from './TweetsList.module.scss';
 
 const TweetsList = () => {
-
-    const dispatch = useDispatch();
-    
-    useEffect(()=> {
-        dispatch(fetchAllUsers());
-    }, [dispatch])
-
-    const users = useSelector(getAllUsers);
+    const users = useSelector(selectAllUsers);
 
     return (
         <>
@@ -23,29 +15,20 @@ const TweetsList = () => {
         <div className={styled.listWrapper}>
         <ul className={styled.list}>
             {users?.map((user) => 
-                    <TweetItem
+                <TweetItem
                     key={user.id} 
                     id={user.id}
                     avatar={user.avatar}
                     tweets={user.tweets}
                     followers ={user.followers}
-                    // data={user}
-                    
                 />
-                    
-                
             )}
         </ul>
-
         </div>
-
+        
         </>
     )
 
 }
-
-// TweetsList.defaultProps = {
-//     items: []
-// }
 
 export default TweetsList;

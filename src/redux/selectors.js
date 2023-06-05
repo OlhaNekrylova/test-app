@@ -1,6 +1,7 @@
 // import { createSelector } from "@reduxjs/toolkit";
 
-export const getAllUsers = store => store.users.users;
+export const selectAllUsers = store => store.users.users;
+export const selectTotalUsers = state => state.users.totalUsers;
 
 // export const getFilter = store => store.filter;
 

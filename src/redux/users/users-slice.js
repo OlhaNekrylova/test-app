@@ -6,6 +6,7 @@ const initialState = {
     users: [],
     loading: false,
     error: null,
+    totalPage: null,
 }
 
 const usersSlice = createSlice({

@@ -1,22 +1,43 @@
-// import {  Suspense } from 'react';
-// import {  Outlet } from 'react-router-dom';
-// import TweetItem from 'modules/TweetItem/TweetItem';
-import TweetsList from '../../modules/TweetsList/TweetsList';
+import React, { useState, useEffect }  from 'react';
+import { useNavigate } from 'react-router-dom';
+import { useSelector, useDispatch } from "react-redux";
+
+import { fetchAllUsers } from "../../redux/users/users-operations";
+import { selectTotalUsers } from "../../redux/selectors";
+
 import Section from '../../modules/Section/Section';
+import TweetsList from '../../modules/TweetsList/TweetsList';
+import LoadMoreBtn from '../../modules/LoodMoreBtn/LoadMoreBtn';
 import styled from './TweetsPage.module.scss';
 
 const TweetsPage = ()=> {
+    const [page, setPage] = useState(1);
+    
+    const totalUsers = useSelector(selectTotalUsers);
+    const totalPages = totalUsers/3;
+
+    const dispatch = useDispatch();
+    const navigate = useNavigate();
+
+    useEffect(() => {
+        dispatch(fetchAllUsers({ page: page }));
+    }, [dispatch, page]);
+
+    const onClick = () => {
+        if (page < totalPages) {
+            setPage(page + 1);
+        }
+    };
+
     return (
         <>
-
-        
-        <Section className={styled.searchWrapper}>
-        {/* <h1>TweetsPage
-        </h1> */}
-        {/* <TweetItem /> */}
-        <TweetsList />
+        <Section className={styled.tweetsListWrapper}>
+            <TweetsList />
+            { page < totalPages && <LoadMoreBtn onClick={ onClick }/> }
         </Section>
-    
+                
+        {/* {LoadMoreBtn && <LoadMoreBtn onClick={loadMore}>Load more</LoadMoreBtn>}  */}
+        
         </>
     )
 }
