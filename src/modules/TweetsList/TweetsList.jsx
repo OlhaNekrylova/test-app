@@ -11,7 +11,6 @@ const TweetsList = () => {
 
     return (
         <>
-        {/* { users.length === 0 && <p className={styled.noResult}>No results</p> } */}
         <div className={styled.listWrapper}>
         <ul className={styled.list}>
             {users?.map((user) => 

@@ -2,9 +2,6 @@
 
 .item {
     position: relative;
-    // display: flex;
-    // flex-wrap: wrap;
-    // justify-content: center;
     width: 380px;
     height: 460px;
     background: linear-gradient(114.99deg, #471CA9 -0.99%, #5736A3 54.28%, #4B2A99 78.99%);
@@ -60,8 +57,6 @@ top: 214px;
     left: 150px;
     top: 178px;
 
-    // border-radius: 85.9232px;
-
 }
 
 .circleWrapper {
@@ -70,7 +65,7 @@ width: 80px;
 height: 80px;
 left: 0px;
 top: 0px;
-// background: #fff;
+
 }
 
 .ellipseWrapper {
@@ -81,9 +76,6 @@ top: 0px;
     left: -5px;
     top: 0px;
     
-    // background: #EBD8FF;
-    // box-shadow: 0px 4.39163px 4.39163px rgba(0, 0, 0, 0.06), inset 0px -2.19582px 4.39163px #AE7BE3, inset 0px 4.39163px 3.29372px #FBF8FF;
-    // border-radius: 13.1749px;
 }
 
 .avatarWrapper {
@@ -92,14 +84,7 @@ top: 0px;
     width: 62px;
     height: 62px;
     left: 9.48px;
-top: 9.42px;
-
-// left: 9.48px;
-// top: 9.42px;
-}
-
-.avatar {
-
+    top: 9.42px;
 }
 
 .infoWrapper {
@@ -110,10 +95,6 @@ top: 9.42px;
 .tweets {
     padding-bottom: 16px;
 }
-
-// .followers {
-//     display: flex;
-// }
 
 .tweetsText {
     display: block;
@@ -148,7 +129,6 @@ top: 9.42px;
     margin-top: 26px;
     margin-left: auto;
     margin-right: auto;
-    // margin-bottom: 36px;
     background: #EBD8FF;
     box-shadow: 0px 3.43693px 3.43693px rgba(0, 0, 0, 0.25);
     border-radius: 10.3108px;

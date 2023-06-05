@@ -1,5 +1,3 @@
-import React, { useState, useEffect } from 'react';
-
 import avatarTest from '../../assets/images/Hansel.png';
 import logo from '../../assets/images/Logo.png';
 import picture from '../../assets/images/Picture2.png';
@@ -9,24 +7,16 @@ import ellipse from '../../assets/images/Ellipse.png';
 import styled from './TweetItem.module.scss';
 
 const TweetItem = ({ id, avatar, tweets, followers, following }) => {
-    // const [following, setFollowing] = useState(false);
+
     const followersNormalize = followers.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
 
     const handleFollowers =  () => {
         if (!following) {
-            // resetCurrent();
-            
             return followers + 1;
         }
 
-        if (following) {
-            // resetCurrent();
-            
-            return followers - 1;
-        }
-        
+        return followers - 1;
     };
-
 
     return (
         <li className={styled.item}>

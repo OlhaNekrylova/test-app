@@ -2,7 +2,6 @@
 
 .listWrapper {
     width: 100%;
-    // height: 460px;
 }
 
 .list {
@@ -10,9 +9,7 @@
     flex-wrap: wrap;
     justify-content: center;
     margin-top: 24px; 
-    // column-gap: 24px;
-    // height: 460px;
-    
+        
     @include tablet {
         margin-top: 40px;
     }

@@ -26,31 +26,7 @@ const usersSlice = createSlice({
             store.loading = false;
             store.error = payload;
         })
-        // .addCase(fetchAddContact.pending, (store) => {
-        //     store.loading = true;
-        // })
-        // .addCase(fetchAddContact.fulfilled, (store, { payload }) => {
-        //     store.loading = false;
-        //     store.error = null;
-        //     store.items.push(payload);
-        // })
-        // .addCase(fetchAddContact.rejected, (store, { payload }) => {
-        //     store.loading = false;
-        //     store.error = payload;
-        // })
-        // .addCase(fetchDeleteContact.pending, (store) => {
-        //     store.loading = true;
-        // })
-        // .addCase(fetchDeleteContact.fulfilled, (store, { payload }) => {
-        //     store.loading = false;
-        //     store.error = null
-        //     const index = store.items.findIndex(item => item.id === payload);
-        //     store.items.splice(index, 1);
-        // })
-        // .addCase(fetchDeleteContact.rejected, (store, { payload }) => {
-        //     store.loading = false;
-        //     store.error = payload;
-        // })
+        
     }
 });
 

@@ -1,5 +1,5 @@
 import React, { useState, useEffect }  from 'react';
-import { useNavigate, useLocation, Link } from 'react-router-dom';
+import { useLocation, Link } from 'react-router-dom';
 import { useSelector, useDispatch } from "react-redux";
 
 import { fetchAllUsers } from "../../redux/users/users-operations";
@@ -17,7 +17,6 @@ const TweetsPage = ()=> {
     const totalPages = totalUsers/3;
 
     const dispatch = useDispatch();
-    const navigate = useNavigate();
     const location = useLocation();
     const from = location.state?.from || '/tweets'; 
 
@@ -45,49 +44,13 @@ const TweetsPage = ()=> {
             className={styled.link}
         >
             <button type="button" 
-                // onClick={goBack} 
                 className={styled.btnGoBack}>
                 GO Back
             </button>
         </Link> 
         </Section>
-                
-        {/* {LoadMoreBtn && <LoadMoreBtn onClick={loadMore}>Load more</LoadMoreBtn>}  */}
-        
         </>
     )
 }
 
 export default TweetsPage;
-
-
-// const TweetsPage = ()=> {
-//     // const navigate = useNavigate();
-//     // const location = useLocation();
-//     // const from = location.state?.from || '/tweets'; 
-//     // const goBack = useCallback(()=> navigate(from), [from, navigate]);
-
-//     return (
-//         <> <h1>Home
-//         </h1>
-//         {/* <div className="container" > */}
-//         {/* <Link
-//             state={{ from }}
-//             to={`/`}
-//             className={styled.link}
-//         >
-//             <button type="button" 
-//                     // onClick={goBack} 
-//                 className={styled.btn}>
-//                 Back
-//             </button>
-//         </Link> */}
-
-//         {/* <TweetsList />
-//         </div> */}
-        
-//         </>
-//     ) 
-// }
-
-// export default TweetsPage;
